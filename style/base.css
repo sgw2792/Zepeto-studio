@@ -1,0 +1,23 @@
+
+*{box-sizing: border-box;
+    margin: 0; padding: 0;}
+img{vertical-align: top;}
+ul, ol{list-style: none;}
+a{text-decoration: none; color: inherit;}
+.clear::after{content: ''; display: block; clear: both;}
+html,body,h1,h2,h3,h4,h5,h6,p,ul,li,ol,dl,dt,dd,blockquote,q,video,img,table,tr,td,th,thead,tbody,tfoot,form,fieldset,legend,input,
+textarea,button,div,section,article,header,nav,main,aside,footer,address,figure,figcaption,sup,sub,em,strong,span,i,del,s,code,a,mark{
+    margin: 0;
+    padding: 0; line-height: 1.0em;
+    font-size: 1.0em; font-weight: 400; font-style: normal;
+    font-family: "Noto Sans KR", sans-serif;
+    color: #000;}
+button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+table,td,tr,th{
+    border-collapse: collapse
+    ;
+}
