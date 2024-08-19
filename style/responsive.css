@@ -1,0 +1,18 @@
+/* mediaQuree의 크기 시작은 max width 기준 디자인 컨텐츠 너비를 기준으로 시작한다 */
+/* 첫번째 조건의 크기는 태블릿부터 시작 .  */
+@media screen and (max-width:1300px){
+    header nav {display: none;} /* 태블릿에서 pc nav 숨기기  */
+    header .lnb .m_nav{display: block;}
+}/* 1300px end */
+@media screen and (max-width:900px){
+    header h1{width: 200px;}}
+    /* 900 end */
+@media screen and (max-width:768px){
+    header h1{width: 150px;}
+    header .lnb .content_link{font-size: 0.81rem;}
+    header .lnb .alarm {width:16px; height: 16px;}
+    header .lnb .m_nav{ width: 16px; height: 16px;}
+    header .lnb .m_nav span{ height: 3px;}
+    main .visual .txt h1{font-size: 1.44rem;}
+    main .visual .txt .start{font-size: 1.19rem;}
+}/* 768px end */

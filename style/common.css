@@ -1,3 +1,5 @@
+/* 반응형 width 값 변경시 자연스러운 동적 추가기능  */
+*{transition: width 0.3s, font-size 0.3s;}
 /* header footer 전용 위치 */
 header {
     max-width: 1920px;
@@ -9,7 +11,7 @@ header {
     justify-content: space-between; align-items: center;
 }
 header h1{
-    width: 300px;
+    width: 300px; transition: width 0.3s;
    /* 세로값은 가로값에 알아서 따라옴  */
 }
 header h1 a{}
@@ -93,6 +95,7 @@ header .lnb .alarm img {
     width: 100%;/*  */
 }
 header .lnb .m_nav{
+    display: none;
     width: 32px; height: 32px;
     position: relative;
 }
@@ -109,11 +112,37 @@ header .lnb .m_nav span:nth-child(3){bottom: 0;}
 /* header .lnb .m_nav span:nth-child(1){transform: rotate(45deg); transform-origin: left top;}
 header .lnb .m_nav span:nth-child(2){display: none;}
 header .lnb .m_nav span:nth-child(3){transform: rotate(-55deg); transform-origin: left top} */
-header .m_nav_wrap{display: none;}
+header .m_nav_wrap{
+    background: #222;
+    position: fixed; right: 0; top: 80px; z-index: 9999;
+}
 header .m_nav_wrap .gnb{}
-header .m_nav_wrap .gnb > li{}
-header .m_nav_wrap .gnb > li > a{}
-header .m_nav_wrap .gnb > li > .sub{}
-header .m_nav_wrap .gnb > li > .sub li{}
-header .m_nav_wrap .gnb > li > .sub li a{}
+header .m_nav_wrap .gnb > li{
+    width: 200px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+}
+header .m_nav_wrap .gnb > li:nth-child(2) a{margin-bottom: 20px;}
+header .m_nav_wrap .gnb > li:nth-child(4) a{margin-bottom: 20px;}
+header .m_nav_wrap .gnb > li > a{
+    padding-left: 15px;
+    font-size: 19px;
+    color: #fff;}
+header .m_nav_wrap .gnb > li > .sub{
+    width: 200px;
+}
+header .m_nav_wrap .gnb > li > .sub li{
+    width:200px;
+    margin: 10px 0;
+    padding: 20px 0 0 15px;
+    
+}
+header .m_nav_wrap .gnb > li > .sub li:first-child{
+    border-top: 1px solid #fff;
+}
+header .m_nav_wrap .gnb > li > .sub li:last-child{
+    margin: 0;
+}
+header .m_nav_wrap .gnb > li > .sub li a{color: #fff;}
 /* header tablet + mobile nav */
